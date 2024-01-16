@@ -35,6 +35,13 @@ app.use("/api/coversations", conversationRoute);
 app.use("/api/messages", messageRoute);
 app.use("/api/reviews", reviewRoute);
 
+app.use((err, req, res, next) => {
+  const errorStatus = err.status || 500;
+  const errorMessage = err.message || "Something went wrong";
+
+  return res.status(errorStatus).send(errorMessage);
+});
+
 // Server Listener
 app.listen(8800, () => {
   connect();

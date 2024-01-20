@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import newRequest from "../../utils/newRequest.js";
 import "./Navbar.scss";
+import Login from "../../pages/login/Login.jsx";
 
 function Navbar() {
   const [active, setActive] = useState(false);
@@ -80,7 +81,9 @@ function Navbar() {
             </div>
           ) : (
             <>
-              <span>Sign in</span>
+              <Link to="/login" className="link">
+                Sign In
+              </Link>
               <Link className="link" to="/register">
                 <button>Join</button>
               </Link>

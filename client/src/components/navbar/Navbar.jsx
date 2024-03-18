@@ -91,7 +91,8 @@ function Navbar() {
           )}
         </div>
       </div>
-      {(active || pathname !== "/") && (
+      {/* Category Menu Temporarily Hidden Until Categories Are Made */}
+      {/* {(active || pathname !== "/") && (
         <>
           <hr />
           <div className="menu">
@@ -125,7 +126,7 @@ function Navbar() {
           </div>
           <hr />
         </>
-      )}
+      )} */}
     </div>
   );
 }

@@ -21,7 +21,8 @@
   }
 
   .container {
-    width: 1400px;
+    max-width: 1400px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -106,12 +107,19 @@
   }
 
   .menu {
-    width: 1400px;
+    max-width: 1400px;
+    width: 100%;
     padding: 10px 0px;
+    overflow-x: scroll;
     display: flex;
+    text-align: center;
     justify-content: space-between;
     color: gray;
     font-weight: 300;
     font-family: "Montserrat", sans-serif;
+
+    .link {
+      min-width: 200px;
+    }
   }
 }
